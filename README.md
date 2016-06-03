@@ -7,9 +7,9 @@ Input: CSV-file with correlations, output: nicely formatted content to use in a 
 Input CSV file
 ```csv
 M1,M2,M3
-1.0,-0.0036716973315424,0.0625337112778693
--0.0036716973315424,1.0,0.136044725405646
-0.0625337112778693,0.136044725405646,1.0
+1.0,-0.0936716973315424,0.2625337112778693
+-0.0936716973315424,1.0,0.636044725405646
+0.2625337112778693,0.636044725405646,1.0
 ```
 
 The command
@@ -19,24 +19,28 @@ python latex-correlations-matrix.py example/input.csv --delimiter ','
 yields the following output:
 ```latex
 & M1 & M2 & M3\\ \hline
-M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.0} & \textcolor{cor-very-weak}{0.06}\\ \hline
-M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{0.14}\\ \hline
+M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.09} & \textcolor{cor-weak}{0.26}\\ \hline
+M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-strong}{0.64}\\ \hline
 M3 &  &  & \textcolor{cor-very-strong}{1.0}\\ \hline
 ```
 
 Pasted into a table frame:
 ```latex
 \begin{table}[ht]
-\begin{tabular}{ccc}
+\begin{tabular}{cccc}
   & M1 & M2 & M3\\ \hline
-  M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.0} & \textcolor{cor-very-weak}{0.06}\\ \hline
-  M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{0.14}\\ \hline
+  M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.09} & \textcolor{cor-weak}{0.26}\\ \hline
+  M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-strong}{0.64}\\ \hline
   M3 &  &  & \textcolor{cor-very-strong}{1.0}\\ \hline
 \end{tabular}
 \caption{Cool table}
 \label{tab:metrics-correlations}
 \end{table}
 ```
+
+Visual result:
+![Correlation half matrix in a table with color highlighting](./example/result.png)
+
 
 ## Requirements
 

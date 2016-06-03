@@ -1,4 +1,4 @@
 & M1 & M2 & M3\\ \hline
-M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.0} & \textcolor{cor-very-weak}{0.06}\\ \hline
-M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{0.14}\\ \hline
+M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.09} & \textcolor{cor-weak}{0.26}\\ \hline
+M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-strong}{0.64}\\ \hline
 M3 &  &  & \textcolor{cor-very-strong}{1.0}\\ \hline
