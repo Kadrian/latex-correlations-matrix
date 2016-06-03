@@ -105,7 +105,6 @@ if __name__ != '__main__':
 # Parse arguments
 args = parser.parse_args()
 
-
 # Read CSV file
 header = []
 data = []
@@ -117,7 +116,6 @@ with open(args.csv_file, 'rb') as csvfile:
     data = all_data[1:]
 
 striked_header_pairs = get_striked_header_pairs(args.strikethrough)
-
 
 # Format and print latex commands
 table = build_table_text(header, data, striked_header_pairs)
