@@ -4,7 +4,39 @@ Input: CSV-file with correlations, output: nicely formatted content to use in a 
 
 ## Example
 
-Todo: Example
+Input CSV file
+```csv
+M1,M2,M3
+1.0,-0.0036716973315424,0.0625337112778693
+-0.0036716973315424,1.0,0.136044725405646
+0.0625337112778693,0.136044725405646,1.0
+```
+
+The command
+```shell
+python latex-correlations-matrix.py example/input.csv --delimiter ','
+```
+yields the following output:
+```latex
+& M1 & M2 & M3\\ \hline
+M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.0} & \textcolor{cor-very-weak}{0.06}\\ \hline
+M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{0.14}\\ \hline
+M3 &  &  & \textcolor{cor-very-strong}{1.0}\\ \hline
+```
+
+Pasted into a table frame:
+```latex
+\begin{table}[ht]
+\begin{tabular}{ccc}
+  & M1 & M2 & M3\\ \hline
+  M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.0} & \textcolor{cor-very-weak}{0.06}\\ \hline
+  M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{0.14}\\ \hline
+  M3 &  &  & \textcolor{cor-very-strong}{1.0}\\ \hline
+\end{tabular}
+\caption{Cool table}
+\label{tab:metrics-correlations}
+\end{table}
+```
 
 ## Requirements
 
@@ -55,38 +87,3 @@ python latex-correlations-matrix.py path/to/file --delimiter ';' --strikethrough
 - (optional) `-d, --delimiter` specifies the column delimiter of the CSV file
 - (optional) `-s --strikethrough` specifies pairs of columns by their header names, which should be striked through
 
-## Example
-
-Input CSV file
-```csv
-M1,M2,M3
-1.0,-0.0036716973315424,0.0625337112778693
--0.0036716973315424,1.0,0.136044725405646
-0.0625337112778693,0.136044725405646,1.0
-```
-
-The command
-```shell
-python latex-correlations-matrix.py example/input.csv --delimiter ','
-```
-yields the following output:
-```latex
-& M1 & M2 & M3\\ \hline
-M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.0} & \textcolor{cor-very-weak}{0.06}\\ \hline
-M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{0.14}\\ \hline
-M3 &  &  & \textcolor{cor-very-strong}{1.0}\\ \hline
-```
-
-Pasted into a table frame:
-```latex
-\begin{table}[ht]
-\begin{tabular}{ccc}
-  & M1 & M2 & M3\\ \hline
-  M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.0} & \textcolor{cor-very-weak}{0.06}\\ \hline
-  M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{0.14}\\ \hline
-  M3 &  &  & \textcolor{cor-very-strong}{1.0}\\ \hline
-\end{tabular}
-\caption{Cool table}
-\label{tab:metrics-correlations}
-\end{table}
-```
