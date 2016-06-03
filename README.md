@@ -1,6 +1,6 @@
 # latex-correlations-matrix
 
-Input: CSV-file, output: string to paste into a LaTeX document
+Input: CSV-file with correlations, output: nicely formatted content to use in a latex table
 
 ## Example
 
