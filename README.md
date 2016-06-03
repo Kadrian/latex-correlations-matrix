@@ -39,6 +39,7 @@ Pasted into a table frame:
 ```
 
 Visual result:
+
 ![Correlation half matrix in a table with color highlighting](./example/result.png)
 
 
