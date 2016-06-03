@@ -29,7 +29,7 @@ You need the following packages in your document preamble:
 ```
 
 The resulting output could be pasted into the following table:
-```
+```latex
 \begin{table}[ht]
 \tiny
 \setlength{\tabcolsep}{0.5pt}
@@ -45,7 +45,9 @@ The resulting output could be pasted into the following table:
 
 ## Usage
 
+```shell
 python latex-correlations-matrix.py path/to/file --delimiter ';' --strikethrough A--B D--F
+```
 
 ### Parameters
 
@@ -56,7 +58,7 @@ python latex-correlations-matrix.py path/to/file --delimiter ';' --strikethrough
 ## Example
 
 Input CSV file
-```
+```csv
 M1,M2,M3
 1.0,-0.0036716973315424,0.0625337112778693
 -0.0036716973315424,1.0,0.136044725405646
@@ -64,11 +66,11 @@ M1,M2,M3
 ```
 
 The command
-```
+```shell
 python latex-correlations-matrix.py example/input.csv --delimiter ','
 ```
 yields the following output:
-```
+```latex
 & M1 & M2 & M3\\ \hline
 M1 & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{-0.0} & \textcolor{cor-very-weak}{0.06}\\ \hline
 M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-very-weak}{0.14}\\ \hline
@@ -76,7 +78,7 @@ M3 &  &  & \textcolor{cor-very-strong}{1.0}\\ \hline
 ```
 
 Pasted into a table frame:
-```
+```latex
 \begin{table}[ht]
 \begin{tabular}{ccc}
   & M1 & M2 & M3\\ \hline
