@@ -33,8 +33,7 @@ Pasted into a table frame:
   M2 &  & \textcolor{cor-very-strong}{1.0} & \textcolor{cor-strong}{0.64}\\ \hline
   M3 &  &  & \textcolor{cor-very-strong}{1.0}\\ \hline
 \end{tabular}
-\caption{Cool table}
-\label{tab:metrics-correlations}
+\label{tab:correlations-matrix}
 \end{table}
 ```
 
