@@ -90,9 +90,3 @@ python latex-correlations-matrix.py path/to/file --delimiter ';' --strikethrough
 - `file` path to the CSV file
 - (optional) `-d, --delimiter` specifies the column delimiter of the CSV file
 - (optional) `-s --strikethrough` specifies pairs of columns by their header names, which should be striked through
-
-## Advanced Example
-
-
-
-
